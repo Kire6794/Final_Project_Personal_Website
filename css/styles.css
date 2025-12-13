@@ -292,7 +292,7 @@ hr.sep{
 .table{
   width: 100%;
   border-collapse: collapse;
-  overflow:hidden;
+  overflow:visible;
   border-radius: 14px;
   border: 1px solid var(--border);
 }
@@ -308,6 +308,19 @@ hr.sep{
   background: var(--panel-2);
 }
 .table tr:last-child td{ border-bottom: 0; }
+
+@media (max-width: 600px){
+  .table{
+    display: block;
+    overflow-x: auto;              /* allow horizontal scroll */
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  .table th, .table td{
+    white-space: nowrap;           /* keep columns readable */
+  }
+}
 
 /* =========
    Cheat sheet
