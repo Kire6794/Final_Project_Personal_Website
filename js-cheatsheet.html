@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript Cheat Sheet | Erick Mulia Goycoolea</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <strong>Erick A. Mulia Goycoolea</strong>
+            <span>Software Development • IT Support</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html" data-nav="index.html">Home</a>
+          <a href="resume.html" data-nav="resume.html">Resume</a>
+          <a href="hobby.html" data-nav="hobby.html">Hobby</a>
+          <a href="js-cheatsheet.html" data-nav="js-cheatsheet.html">JS Cheat Sheet</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn small ghost" onclick="toggleTheme()" type="button">Toggle Theme</button>
+          <button class="btn small hamburger" onclick="toggleMobileNav()" type="button">Menu</button>
+        </div>
+      </div>
+
+      <nav id="mobileNav" class="mobile" hidden aria-label="Mobile navigation">
+        <a href="index.html" data-nav="index.html">Home</a>
+        <a href="resume.html" data-nav="resume.html">Resume</a>
+        <a href="hobby.html" data-nav="hobby.html">Hobby</a>
+        <a href="js-cheatsheet.html" data-nav="js-cheatsheet.html">JS Cheat Sheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="card pad">
+        <span class="badge">JavaScript Cheat Sheet</span>
+        <h1 style="margin:.6rem 0 0;">Searchable notes (15+ concepts)</h1>
+        <p class="muted" style="margin:.6rem 0 0;">
+          Use the search bar + tags to filter. This page is intentionally “developer handy.”
+        </p>
+
+        <hr class="sep" />
+
+        <div class="searchbar">
+          <input id="searchInput" class="input" placeholder="Search… (e.g., fetch, array, event, map)" />
+          <button class="btn small" type="button" onclick="document.getElementById('searchInput').value=''; document.getElementById('searchInput').dispatchEvent(new Event('input'));">Clear</button>
+        </div>
+
+        <div class="tags" aria-label="Filter tags">
+          <span class="tag active" data-tag="all">All</span>
+          <span class="tag" data-tag="dom">DOM</span>
+          <span class="tag" data-tag="array">Arrays</span>
+          <span class="tag" data-tag="async">Async</span>
+          <span class="tag" data-tag="syntax">Syntax</span>
+        </div>
+
+        <hr class="sep" />
+
+        <div id="cheatList" class="grid-2">
+          <!-- 1 -->
+          <div class="card item" data-title="Query selector" data-tags="dom">
+            <h3>1) document.querySelector()</h3>
+            <p>Selects the first matching element.</p>
+            <div class="code">const btn = document.querySelector("#saveBtn");</div>
+          </div>
+
+          <!-- 2 -->
+          <div class="card item" data-title="Query selector all" data-tags="dom">
+            <h3>2) document.querySelectorAll()</h3>
+            <p>Selects all matching elements (NodeList).</p>
+            <div class="code">const items = document.querySelectorAll(".card");</div>
+          </div>
+
+          <!-- 3 -->
+          <div class="card item" data-title="Add event listener" data-tags="dom">
+            <h3>3) addEventListener()</h3>
+            <p>Respond to clicks, input, submit, keypress, etc.</p>
+            <div class="code">btn.addEventListener("click", () =&gt; alert("Hi!"));</div>
+          </div>
+
+          <!-- 4 -->
+          <div class="card item" data-title="Prevent default" data-tags="dom">
+            <h3>4) event.preventDefault()</h3>
+            <p>Stops default browser behavior (great for forms).</p>
+            <div class="code">form.addEventListener("submit", (e) =&gt; { e.preventDefault(); });</div>
+          </div>
+
+          <!-- 5 -->
+          <div class="card item" data-title="Template literals" data-tags="syntax">
+            <h3>5) Template literals</h3>
+            <p>Use backticks to embed variables.</p>
+            <div class="code">const msg = `Hello ${name}!`;</div>
+          </div>
+
+          <!-- 6 -->
+          <div class="card item" data-title="Destructuring" data-tags="syntax">
+            <h3>6) Destructuring</h3>
+            <p>Pull values from objects/arrays quickly.</p>
+            <div class="code">const { id, title } = post;  const [a,b] = nums;</div>
+          </div>
+
+          <!-- 7 -->
+          <div class="card item" data-title="Array map" data-tags="array">
+            <h3>7) Array.map()</h3>
+            <p>Transforms items into a new array.</p>
+            <div class="code">const names = users.map(u =&gt; u.name);</div>
+          </div>
+
+          <!-- 8 -->
+          <div class="card item" data-title="Array filter" data-tags="array">
+            <h3>8) Array.filter()</h3>
+            <p>Keeps items that match a condition.</p>
+            <div class="code">const adults = users.filter(u =&gt; u.age &gt;= 18);</div>
+          </div>
+
+          <!-- 9 -->
+          <div class="card item" data-title="Array find" data-tags="array">
+            <h3>9) Array.find()</h3>
+            <p>Returns the first match (or undefined).</p>
+            <div class="code">const user = users.find(u =&gt; u.id === 7);</div>
+          </div>
+
+          <!-- 10 -->
+          <div class="card item" data-title="Array reduce" data-tags="array">
+            <h3>10) Array.reduce()</h3>
+            <p>Combines array into one value (sum, object map, etc.).</p>
+            <div class="code">const total = prices.reduce((s,p) =&gt; s + p, 0);</div>
+          </div>
+
+          <!-- 11 -->
+          <div class="card item" data-title="Local storage" data-tags="dom">
+            <h3>11) localStorage</h3>
+            <p>Persist small data in the browser.</p>
+            <div class="code">localStorage.setItem("theme","dark"); const t = localStorage.getItem("theme");</div>
+          </div>
+
+          <!-- 12 -->
+          <div class="card item" data-title="JSON parse stringify" data-tags="syntax">
+            <h3>12) JSON.parse / JSON.stringify</h3>
+            <p>Convert between objects and strings.</p>
+            <div class="code">const s = JSON.stringify(obj); const o = JSON.parse(s);</div>
+          </div>
+
+          <!-- 13 -->
+          <div class="card item" data-title="Fetch API" data-tags="async">
+            <h3>13) fetch()</h3>
+            <p>HTTP requests (usually returns JSON).</p>
+            <div class="code">const res = await fetch("/api/data"); const data = await res.json();</div>
+          </div>
+
+          <!-- 14 -->
+          <div class="card item" data-title="Try catch" data-tags="async">
+            <h3>14) try/catch</h3>
+            <p>Handle errors safely.</p>
+            <div class="code">try { risky(); } catch (err) { console.error(err); }</div>
+          </div>
+
+          <!-- 15 -->
+          <div class="card item" data-title="Async await" data-tags="async">
+            <h3>15) async/await</h3>
+            <p>Write asynchronous code that reads like synchronous.</p>
+            <div class="code">async function load(){ const r = await fetch(url); return r.json(); }</div>
+          </div>
+
+          <!-- 16 (extra) -->
+          <div class="card item" data-title="Set and Map" data-tags="syntax">
+            <h3>16) Set / Map</h3>
+            <p>Unique values (Set) and key/value pairs (Map).</p>
+            <div class="code">const s = new Set([1,1,2]); const m = new Map([["a",1]]);</div>
+          </div>
+        </div>
+
+        <hr class="sep" />
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="card pad">
+        <span class="muted">Search + tag filtering is done in <code>js/main.js</code>.</span>
+      </div>
+    </footer>
+  </main>
+
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">↑ Top</button>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

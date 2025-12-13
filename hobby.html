@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hobby | Erick Mulia Goycoolea</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <strong>Erick A. Mulia Goycoolea</strong>
+            <span>Software Development • IT Support</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html" data-nav="index.html">Home</a>
+          <a href="resume.html" data-nav="resume.html">Resume</a>
+          <a href="hobby.html" data-nav="hobby.html">Hobby</a>
+          <a href="js-cheatsheet.html" data-nav="js-cheatsheet.html">JS Cheat Sheet</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn small ghost" onclick="toggleTheme()" type="button">Toggle Theme</button>
+          <button class="btn small hamburger" onclick="toggleMobileNav()" type="button">Menu</button>
+        </div>
+      </div>
+
+      <nav id="mobileNav" class="mobile" hidden aria-label="Mobile navigation">
+        <a href="index.html" data-nav="index.html">Home</a>
+        <a href="resume.html" data-nav="resume.html">Resume</a>
+        <a href="hobby.html" data-nav="hobby.html">Hobby</a>
+        <a href="js-cheatsheet.html" data-nav="js-cheatsheet.html">JS Cheat Sheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="card pad">
+        <span class="badge">Hobby / Interest</span>
+        <h1 style="margin:.6rem 0 0;">Games, world-building, and “systems thinking”</h1>
+        <p class="muted" style="margin:.6rem 0 0;">
+          I love games that reward planning, creativity, and teamwork — and I enjoy creating characters, rules,
+          and small tools around them (notes, trackers, build calculators, etc.).
+        </p>
+
+        <hr class="sep" />
+
+        <div class="grid-2">
+          <div class="card pad">
+            <strong>Why I like it</strong>
+            <ul class="list">
+              <li>Strategy & optimization (like debugging, but fun)</li>
+              <li>Creative storytelling and world-building</li>
+              <li>Co-op coordination and communication</li>
+              <li>Designing tools: trackers, notes, small scripts</li>
+            </ul>
+          </div>
+          <div class="card pad">
+            <strong>Favorites</strong>
+            <div class="pill-row">
+              <span class="badge">Star Citizen</span>
+              <span class="badge">D&D</span>
+              <span class="badge">Cosmere</span>
+              <span class="badge">Age of Empires II</span>
+              <span class="badge">Battlefield</span>
+            </div>
+            <p class="muted" style="margin:.6rem 0 0;">
+              Click a card below to open details (JavaScript modal).
+            </p>
+          </div>
+        </div>
+
+        <hr class="sep" />
+
+        <div class="gallery">
+          <div class="tile" onclick="openModal('Star Citizen', 'I enjoy space flight, ship roles, and learning how systems interact (power, shields, weapons). I also like experimenting with controller setups and performance settings.')">
+            <div class="thumb" aria-hidden="true"></div>
+            <div class="meta">
+              <strong>Star Citizen</strong>
+              <span>Space flight • Loadouts • Co-op</span>
+            </div>
+          </div>
+
+          <div class="tile" onclick="openModal('D&D World-Building', 'Creating characters, patrons, and lore is like designing a system: rules, tradeoffs, and interesting constraints. I like writing short backstories and building playable ideas.')">
+            <div class="thumb" aria-hidden="true"></div>
+            <div class="meta">
+              <strong>D&D / RPGs</strong>
+              <span>Characters • Lore • Tooling</span>
+            </div>
+          </div>
+
+          <div class="tile" onclick="openModal('Strategy Games', 'Strategy games scratch the same itch as programming: plan, test, iterate. I enjoy learning build orders, counters, and decision-making under pressure.')">
+            <div class="thumb" aria-hidden="true"></div>
+            <div class="meta">
+              <strong>Strategy</strong>
+              <span>Planning • Optimization • Iteration</span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="sep" />
+
+        <h2 style="margin:0 0 .6rem;">Mini “Build Table” (example organizing element)</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>What I track</th>
+              <th>Why it matters</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Game setup</strong></td>
+              <td class="muted">Keybinds, controller layout, performance notes</td>
+              <td class="muted">Faster iteration + smoother sessions</td>
+            </tr>
+            <tr>
+              <td><strong>RPG notes</strong></td>
+              <td class="muted">NPCs, locations, plot hooks, character goals</td>
+              <td class="muted">Better continuity + story depth</td>
+            </tr>
+            <tr>
+              <td><strong>Tools</strong></td>
+              <td class="muted">Trackers, templates, small scripts</td>
+              <td class="muted">More time playing/creating, less time searching</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="dialog">
+        <div class="top">
+          <strong id="modalTitle">Title</strong>
+          <button class="btn small ghost" onclick="closeModal()" type="button">Close</button>
+        </div>
+        <div class="content">
+          <p id="modalBody" class="muted" style="margin:0;"></p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="card pad">
+        <span class="muted">Made with HTML + CSS + JavaScript</span>
+      </div>
+    </footer>
+  </main>
+
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">↑ Top</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

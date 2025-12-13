@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume | Erick Mulia Goycoolea</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <strong>Erick A. Mulia Goycoolea</strong>
+            <span>Software Development • IT Support</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html" data-nav="index.html">Home</a>
+          <a href="resume.html" data-nav="resume.html">Resume</a>
+          <a href="hobby.html" data-nav="hobby.html">Hobby</a>
+          <a href="js-cheatsheet.html" data-nav="js-cheatsheet.html">JS Cheat Sheet</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn small ghost" onclick="toggleTheme()" type="button">Toggle Theme</button>
+          <button class="btn small hamburger" onclick="toggleMobileNav()" type="button">Menu</button>
+        </div>
+      </div>
+
+      <nav id="mobileNav" class="mobile" hidden aria-label="Mobile navigation">
+        <a href="index.html" data-nav="index.html">Home</a>
+        <a href="resume.html" data-nav="resume.html">Resume</a>
+        <a href="hobby.html" data-nav="hobby.html">Hobby</a>
+        <a href="js-cheatsheet.html" data-nav="js-cheatsheet.html">JS Cheat Sheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="container">
+    <section class="section">
+      <div class="card pad">
+
+        <!-- Header -->
+        <div class="header-row">
+          <div class="profile">
+            <img src="assets/profile.jpg" alt="Profile photo of Erick Mulia Goycoolea" />
+            <div>
+              <h1 style="margin:0;">Erick Alexander Mulia Goycoolea</h1>
+              <p class="muted" style="margin:.3rem 0 0;">
+                Software Development • IT Support
+              </p>
+              <div class="pill-row">
+                <span class="badge">Java</span>
+                <span class="badge">C#</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">React</span>
+                <span class="badge">SQL</span>
+                <span class="badge">Windows & Linux</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align:right; display:flex; flex-direction:column; gap:.5rem; align-items:flex-end;">
+            <button class="btn" type="button" onclick="window.print()">Print / Save PDF</button>
+
+            <!-- Download PDF Resume -->
+            <a class="btn ghost" href="assets/Erick-Mulia-Resume.pdf" target="_blank" rel="noopener">
+              Download Resume (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <hr class="sep" />
+        <p class="muted">
+          📧 <a href="mailto:erick671994@gmail.com">erick671994@gmail.com</a> &nbsp;|&nbsp;
+          📞 368-999-7701 &nbsp;|&nbsp;
+          <a href="https://www.linkedin.com/in/erick-alexander-mulia-goycoolea-996771152" target="_blank" rel="noopener">LinkedIn</a> &nbsp;|&nbsp;
+          <a href="https://github.com/Kire6794" target="_blank" rel="noopener">GitHub</a>
+        </p>
+
+        <!-- Summary -->
+        <hr class="sep" />
+        <strong>Professional Summary</strong>
+        <p class="muted" style="margin:.5rem 0 0;">
+          Software Development professional with a strong background in Java, C#, JavaScript, and system support.
+          Experienced in full-stack development, IT operations, and automation, with academic and professional
+          experience across Canada and Mexico. Fluent in English and Spanish, with a proven ability to deliver
+          reliable, well-structured solutions in both independent and team-based environments.
+        </p>
+
+        <!-- Experience -->
+        <hr class="sep" />
+        <h2 style="margin:0 0 .6rem;">Relevant Experience</h2>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width:28%;">Role</th>
+              <th>Responsibilities & Achievements</th>
+              <th style="width:20%;">Dates</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Technology Associate</strong><br/>
+                <span class="muted">NanoTess</span>
+              </td>
+              <td class="muted">
+                Assisted in production operations and quality control.
+                Supported IT tasks including troubleshooting and system maintenance.
+                Contributed to clinical data capture and analysis at Beacon Dermatology,
+                improving data management processes.
+              </td>
+              <td class="muted">2023 – Present</td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Pet Care Associate & Cashier</strong><br/>
+                <span class="muted">PetSmart Canada</span>
+              </td>
+              <td class="muted">
+                Provided pet care guidance and customer service.
+                Managed transactions efficiently and maintained organized inventory
+                and store environments.
+              </td>
+              <td class="muted">2023 – Present</td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Co-Founder & Software Developer</strong><br/>
+                <span class="muted">TInnovators</span>
+              </td>
+              <td class="muted">
+                Co-founded a software and web development startup.
+                Acted as client lead and full-stack developer,
+                delivering websites and custom software for small businesses.
+              </td>
+              <td class="muted">2020 – 2023</td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Software Development Intern</strong><br/>
+                <span class="muted">Xertica (Google Partner)</span>
+              </td>
+              <td class="muted">
+                Participated in internal application development, server management,
+                database handling, and client service operations.
+              </td>
+              <td class="muted">2017 – 2018</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Education -->
+        <hr class="sep" />
+        <h2 style="margin:0 0 .6rem;">Education & Achievements</h2>
+        <ul class="list">
+          <li>
+            <strong>Software Development Diploma</strong> — Bow Valley College (Expected Graduation 2025)
+          </li>
+          <li>
+            <strong>BSc. Computer Science</strong> — Universidad Autónoma Metropolitana (2013–2018)
+            <ul class="list">
+              <li>3 years Java experience, 1 year C experience, Python certified</li>
+              <li>Experienced with Windows and Linux platforms</li>
+              <li>Fluent in English and Spanish</li>
+            </ul>
+          </li

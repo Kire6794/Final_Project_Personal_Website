@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Erick Mulia Goycoolea | Personal Website</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <strong>Erick A. Mulia Goycoolea</strong>
+            <span>Software Development • IT Support</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html" data-nav="index.html">Home</a>
+          <a href="resume.html" data-nav="resume.html">Resume</a>
+          <a href="hobby.html" data-nav="hobby.html">Hobby</a>
+          <a href="js-cheatsheet.html" data-nav="js-cheatsheet.html">JS Cheat Sheet</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn small ghost" onclick="toggleTheme()" type="button">Toggle Theme</button>
+          <button class="btn small hamburger" onclick="toggleMobileNav()" type="button">Menu</button>
+        </div>
+      </div>
+
+      <nav id="mobileNav" class="mobile" hidden aria-label="Mobile navigation">
+        <a href="index.html" data-nav="index.html">Home</a>
+        <a href="resume.html" data-nav="resume.html">Resume</a>
+        <a href="hobby.html" data-nav="hobby.html">Hobby</a>
+        <a href="js-cheatsheet.html" data-nav="js-cheatsheet.html">JS Cheat Sheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="container">
+    <section class="section hero">
+
+      <!-- Left / Main -->
+      <div class="card pad">
+        <span class="badge">Personal Portfolio</span>
+
+        <h1 style="margin-top:.7rem;">
+          Building clean, practical web projects
+        </h1>
+
+        <p>
+          Hi, I’m Erick. This website is a personal hub where I showcase my resume,
+          interests, and web development practice using HTML, CSS, and JavaScript.
+        </p>
+
+        <div class="cta">
+          <a class="btn" href="resume.html">View Resume</a>
+          <a class="btn ghost" href="js-cheatsheet.html">JavaScript Cheat Sheet</a>
+        </div>
+
+        <hr class="sep" />
+
+        <!-- Why this site -->
+        <div class="card pad">
+          <strong>Why I built this site</strong>
+          <p class="muted" style="margin-top:.5rem;">
+            I built this website as part of a web development project to practice
+            responsive design, JavaScript interactivity, and clean UI structure.
+            It also serves as a central place to present my work and skills.
+          </p>
+        </div>
+
+        <hr class="sep" />
+
+        <!-- How it's built -->
+        <div class="card pad">
+          <strong>How this site is built</strong>
+          <p class="muted" style="margin-top:.5rem;">
+            The site uses semantic HTML for structure, custom CSS for layout and theming,
+            and JavaScript for interactivity such as navigation handling,
+            search filtering, modals, and scroll behavior.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right / Sidebar -->
+      <aside class="card hero-side">
+
+        <!-- Quick snapshot -->
+        <div>
+          <strong style="font-size:1.05rem;">Quick snapshot</strong>
+          <p class="muted" style="margin:.3rem 0 0;">
+            Student + builder. Strong focus on practical deliverables
+            and clean, user-friendly interfaces.
+          </p>
+        </div>
+
+        <!-- KPIs -->
+        <div class="kpi">
+          <div class="box">
+            <strong>4 pages</strong>
+            <span>Consistent design + navigation</span>
+          </div>
+          <div class="box">
+            <strong>Responsive</strong>
+            <span>Mobile-first layout</span>
+          </div>
+          <div class="box">
+            <strong>Interactive</strong>
+            <span>Theme, modals, search, scroll</span>
+          </div>
+          <div class="box">
+            <strong>Reusable</strong>
+            <span>Cheat sheet utilities</span>
+          </div>
+        </div>
+
+        <!-- Project Highlights -->
+        <div class="card pad" style="background:var(--panel-2);">
+          <strong>Project Highlights</strong>
+          <ul class="list" style="margin-top:.5rem;">
+            <li>Multi-page website using HTML, CSS, and JavaScript</li>
+            <li>Consistent navigation with mobile menu support</li>
+            <li>Resume page with real professional experience</li>
+            <li>JavaScript-powered modals, search, and back-to-top button</li>
+          </ul>
+        </div>
+
+        <!-- What I'm practicing -->
+        <div class="card pad" style="background:var(--panel-2);">
+          <strong>What I’m practicing right now</strong>
+          <ul class="list" style="margin-top:.5rem;">
+            <li>Writing cleaner and more reusable JavaScript</li>
+            <li>Responsive layouts using Flexbox and Grid</li>
+            <li>Improving UI spacing, contrast, and readability</li>
+            <li>Organizing small projects with consistent structure</li>
+          </ul>
+        </div>
+
+      </aside>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="card pad">
+        <div class="grid-2">
+          <div>
+            <strong>Contact</strong>
+            <p class="muted" style="margin:.35rem 0 0;">
+              See the Resume page for full contact details.
+            </p>
+          </div>
+          <div style="text-align:right;">
+            <span class="muted">© <span id="year"></span> Erick A. Mulia Goycoolea</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+    ↑ Top
+  </button>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
