@@ -6,6 +6,7 @@
   <title>Resume | Erick Mulia Goycoolea</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
 
   <!-- ================= NAV ================= -->
@@ -28,16 +29,16 @@
         </nav>
 
         <div class="nav-actions">
-          <button class="btn small ghost" onclick="toggleTheme()" type="button">Toggle Theme</button>
-          <button class="btn small hamburger" onclick="toggleMobileNav()" type="button">Menu</button>
+          <button class="btn small ghost" type="button" onclick="toggleTheme()">Toggle Theme</button>
+          <button class="btn small hamburger" type="button" onclick="toggleMobileNav()">Menu</button>
         </div>
       </div>
 
       <nav id="mobileNav" class="mobile" hidden aria-label="Mobile navigation">
-        <a href="index.html" data-nav="index.html">Home</a>
-        <a href="resume.html" data-nav="resume.html">Resume</a>
-        <a href="hobby.html" data-nav="hobby.html">Hobby</a>
-        <a href="js-cheatsheet.html" data-nav="js-cheatsheet.html">JS Cheat Sheet</a>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="js-cheatsheet.html">JS Cheat Sheet</a>
       </nav>
     </div>
   </header>
@@ -60,19 +61,16 @@
                 <span class="badge">Java</span>
                 <span class="badge">C#</span>
                 <span class="badge">JavaScript</span>
-                <span class="badge">React</span>
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
                 <span class="badge">SQL</span>
-                <span class="badge">Windows & Linux</span>
               </div>
             </div>
           </div>
 
-          <div style="text-align:right; display:flex; flex-direction:column; gap:.5rem; align-items:flex-end;">
-            <button class="btn" type="button" onclick="window.print()">Print / Save PDF</button>
-
-            <!-- Download PDF Resume -->
-            <a class="btn ghost" href="assets/Erick-Mulia-Resume.pdf" target="_blank" rel="noopener">
-              Download Resume (PDF)
+          <div style="text-align:right;">
+            <a class="btn ghost" href="assets/Erick-Mulia-Resume.pdf" target="_blank">
+              Download PDF
             </a>
           </div>
         </div>
@@ -80,83 +78,67 @@
         <!-- Contact -->
         <hr class="sep" />
         <p class="muted">
-          📧 <a href="mailto:erick671994@gmail.com">erick671994@gmail.com</a> &nbsp;|&nbsp;
-          📞 368-999-7701 &nbsp;|&nbsp;
-          <a href="https://www.linkedin.com/in/erick-alexander-mulia-goycoolea-996771152" target="_blank" rel="noopener">LinkedIn</a> &nbsp;|&nbsp;
-          <a href="https://github.com/Kire6794" target="_blank" rel="noopener">GitHub</a>
+          📧 <a href="mailto:erick671994@gmail.com">erick671994@gmail.com</a> |
+          📞 368-999-7701 |
+          <a href="https://www.linkedin.com/in/erick-alexander-mulia-goycoolea-996771152" target="_blank">LinkedIn</a> |
+          <a href="https://github.com/Kire6794" target="_blank">GitHub</a>
         </p>
 
         <!-- Summary -->
         <hr class="sep" />
         <strong>Professional Summary</strong>
-        <p class="muted" style="margin:.5rem 0 0;">
-          Software Development professional with a strong background in Java, C#, JavaScript, and system support.
-          Experienced in full-stack development, IT operations, and automation, with academic and professional
-          experience across Canada and Mexico. Fluent in English and Spanish, with a proven ability to deliver
-          reliable, well-structured solutions in both independent and team-based environments.
+        <p class="muted" style="margin-top:.5rem;">
+          Software Development student with a strong background in Java, C#, JavaScript,
+          and IT support. Experienced in building responsive web applications,
+          troubleshooting systems, and working in both academic and professional environments.
+          Fluent in English and Spanish.
         </p>
 
         <!-- Experience -->
         <hr class="sep" />
-        <h2 style="margin:0 0 .6rem;">Relevant Experience</h2>
+        <h2>Relevant Experience</h2>
 
         <table class="table">
           <thead>
             <tr>
-              <th style="width:28%;">Role</th>
-              <th>Responsibilities & Achievements</th>
-              <th style="width:20%;">Dates</th>
+              <th>Role</th>
+              <th>Description</th>
+              <th>Dates</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>
-                <strong>Technology Associate</strong><br/>
-                <span class="muted">NanoTess</span>
-              </td>
+              <td><strong>Technology Associate</strong><br><span class="muted">NanoTess</span></td>
               <td class="muted">
-                Assisted in production operations and quality control.
-                Supported IT tasks including troubleshooting and system maintenance.
-                Contributed to clinical data capture and analysis at Beacon Dermatology,
-                improving data management processes.
+                Assisted with production operations, IT troubleshooting,
+                and clinical data capture at Beacon Dermatology.
               </td>
               <td class="muted">2023 – Present</td>
             </tr>
 
             <tr>
-              <td>
-                <strong>Pet Care Associate & Cashier</strong><br/>
-                <span class="muted">PetSmart Canada</span>
-              </td>
+              <td><strong>Pet Care Associate & Cashier</strong><br><span class="muted">PetSmart Canada</span></td>
               <td class="muted">
-                Provided pet care guidance and customer service.
-                Managed transactions efficiently and maintained organized inventory
-                and store environments.
+                Provided customer service, managed transactions,
+                and maintained organized inventory.
               </td>
               <td class="muted">2023 – Present</td>
             </tr>
 
             <tr>
-              <td>
-                <strong>Co-Founder & Software Developer</strong><br/>
-                <span class="muted">TInnovators</span>
-              </td>
+              <td><strong>Co-Founder & Software Developer</strong><br><span class="muted">TInnovators</span></td>
               <td class="muted">
-                Co-founded a software and web development startup.
-                Acted as client lead and full-stack developer,
-                delivering websites and custom software for small businesses.
+                Developed web and software solutions for small businesses
+                as a full-stack developer.
               </td>
               <td class="muted">2020 – 2023</td>
             </tr>
 
             <tr>
-              <td>
-                <strong>Software Development Intern</strong><br/>
-                <span class="muted">Xertica (Google Partner)</span>
-              </td>
+              <td><strong>Software Development Intern</strong><br><span class="muted">Xertica</span></td>
               <td class="muted">
-                Participated in internal application development, server management,
-                database handling, and client service operations.
+                Supported application development, server management,
+                and database operations.
               </td>
               <td class="muted">2017 – 2018</td>
             </tr>
@@ -165,16 +147,40 @@
 
         <!-- Education -->
         <hr class="sep" />
-        <h2 style="margin:0 0 .6rem;">Education & Achievements</h2>
+        <h2>Education</h2>
         <ul class="list">
-          <li>
-            <strong>Software Development Diploma</strong> — Bow Valley College (Expected Graduation 2025)
-          </li>
-          <li>
-            <strong>BSc. Computer Science</strong> — Universidad Autónoma Metropolitana (2013–2018)
-            <ul class="list">
-              <li>3 years Java experience, 1 year C experience, Python certified</li>
-              <li>Experienced with Windows and Linux platforms</li>
-              <li>Fluent in English and Spanish</li>
-            </ul>
-          </li
+          <li><strong>Software Development Diploma</strong> — Bow Valley College (Expected 2025)</li>
+          <li><strong>BSc. Computer Science</strong> — Universidad Autónoma Metropolitana (2013–2018)</li>
+        </ul>
+
+        <!-- Interests -->
+        <hr class="sep" />
+        <h2>Interests</h2>
+        <ul class="list">
+          <li>Rock climbing and mountaineering</li>
+          <li>Martial arts and fencing</li>
+          <li>Gaming, systems design, and world-building</li>
+        </ul>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="card pad">
+        <span class="muted">Last updated: <span id="updated"></span></span>
+      </div>
+    </footer>
+  </main>
+
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+    ↑ Top
+  </button>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById("updated").textContent =
+      new Date().toLocaleDateString();
+  </script>
+
+</body>
+</html>
