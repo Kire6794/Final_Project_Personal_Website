@@ -21,7 +21,7 @@
         <nav class="nav-links" aria-label="Primary navigation">
           <a href="index.html" data-nav="index.html">Home</a>
           <a href="resume.html" data-nav="resume.html">Resume</a>
-          <a href="hobby.html" data-nav="hobby.html">Hobby</a>
+          <a href="hobby.html" data-nav="hobby.html">Hobbies</a>
           <a href="js-cheatsheet.html" data-nav="js-cheatsheet.html">JS Cheat Sheet</a>
         </nav>
 
@@ -34,7 +34,7 @@
       <nav id="mobileNav" class="mobile" hidden aria-label="Mobile navigation">
         <a href="index.html" data-nav="index.html">Home</a>
         <a href="resume.html" data-nav="resume.html">Resume</a>
-        <a href="hobby.html" data-nav="hobby.html">Hobby</a>
+        <a href="hobby.html" data-nav="hobby.html">Hobbies</a>
         <a href="js-cheatsheet.html" data-nav="js-cheatsheet.html">JS Cheat Sheet</a>
       </nav>
     </div>
@@ -43,7 +43,7 @@
   <main class="container">
     <section class="section">
       <div class="card pad">
-        <span class="badge">Hobby / Interest</span>
+        <span class="badge">Hobbies / Interest</span>
         <h1 style="margin:.6rem 0 0;">Games, world-building, and “systems thinking”</h1>
         <p class="muted" style="margin:.6rem 0 0;">
           I love games that reward planning, creativity, and teamwork — and I enjoy creating characters, rules,
@@ -81,7 +81,9 @@
 
         <div class="gallery">
           <div class="tile" onclick="openModal('Star Citizen', 'I enjoy space flight, ship roles, and learning how systems interact (power, shields, weapons). I also like experimenting with controller setups and performance settings.')">
-            <div class="thumb" aria-hidden="true"></div>
+            <img class="thumb"
+                src="assets/star-citizen.png"
+                alt="Star Citizen space flight and ship systems" />
             <div class="meta">
               <strong>Star Citizen</strong>
               <span>Space flight • Loadouts • Co-op</span>
@@ -89,7 +91,10 @@
           </div>
 
           <div class="tile" onclick="openModal('D&D World-Building', 'Creating characters, patrons, and lore is like designing a system: rules, tradeoffs, and interesting constraints. I like writing short backstories and building playable ideas.')">
-            <div class="thumb" aria-hidden="true"></div>
+            <img class="thumb"
+                src="assets/dnd.png"
+                alt="Dungeons and Dragons world building and character creation" />
+
             <div class="meta">
               <strong>D&D / RPGs</strong>
               <span>Characters • Lore • Tooling</span>
@@ -97,7 +102,10 @@
           </div>
 
           <div class="tile" onclick="openModal('Strategy Games', 'Strategy games scratch the same itch as programming: plan, test, iterate. I enjoy learning build orders, counters, and decision-making under pressure.')">
-            <div class="thumb" aria-hidden="true"></div>
+            <img class="thumb"
+                src="assets/strategy.jpg"
+                alt="Strategy games focused on planning and optimization" />
+
             <div class="meta">
               <strong>Strategy</strong>
               <span>Planning • Optimization • Iteration</span>
@@ -138,8 +146,6 @@
             Many of these habits translate directly into software development:
             planning systems, tracking details, and iterating on ideas over time.
         </p>
-
-
       </div>
     </section>
 

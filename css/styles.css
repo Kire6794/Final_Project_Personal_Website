@@ -405,12 +405,13 @@ hr.sep{
 }
 .tile:hover{ transform: translateY(-2px); }
 .tile .thumb{
+  width: 100%;
   height: 170px;
-  background:
-    radial-gradient(450px 220px at 30% 30%, rgba(110,231,255,0.20), transparent 55%),
-    radial-gradient(450px 220px at 70% 50%, rgba(167,139,250,0.18), transparent 60%),
-    rgba(255,255,255,0.03);
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid var(--border);
 }
+
 .tile .meta{ padding: .95rem; }
 .tile .meta strong{ display:block; }
 .tile .meta span{ color: var(--muted); font-size: .92rem; }
